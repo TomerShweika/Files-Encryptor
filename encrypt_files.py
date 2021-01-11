@@ -20,11 +20,11 @@ def encrypt(in_file,out_file):
 FileNames = []
 
 #All PDF files in current directory 
-PdfFilenamesList = glob.glob('*.pdf')
+PdfFilenamesList = glob.glob('*.pdf')    #Here put every type of file that you want for example ("txt" , "docx")
 
 #Takes All file names
 for i in PdfFilenamesList:
-    FileNames.append(i[:-4])
+    FileNames.append(i[:i.rfind(".")])
 
 #Encrypt all Files
 for j in range(len(PdfFilenamesList)):
